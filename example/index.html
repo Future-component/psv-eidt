@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>全景编辑demo</title>
+  <style>
+  body,
+  #container {
+    width: 100%;
+    height: 100%;
+    height: 100vh;
+  }
+  </style>
+</head>
+<body>
+  <div id="container"></div>
+
+  <script src="../lib/three-96.min.js"></script>
+  <script src="../lib/dat.gui.js"></script>
+  <script src="../lib/photo-sphere-viewer-eidt-1.0.0.js"></script>
+  <script>
+    var getMeshPosition = function(data) {
+      console.log('mesh-data', data);
+    }
+
+    var div = document.getElementById('container');
+    var psv = new PhotoSphereViewerEidt({
+      panorama: './3.jpg',
+      container: div,
+      max_fov: 90,
+      default_position: {
+        long: 3,
+        lat: 0,
+      },
+      getMeshPosition: getMeshPosition,
+    })
+
+  </script>
+</body>
+</html>
