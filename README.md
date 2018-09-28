@@ -30,4 +30,7 @@ var psv = new PhotoSphereViewerEidt({
   },
   getMeshPosition: getMeshPosition,
 })
+
+// 卸载编辑场景
+psv.willUnMountScene();
 ```

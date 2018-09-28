@@ -16,6 +16,7 @@
 </head>
 <body>
   <div id="container"></div>
+  <button id="remove">卸载编辑窗口</button>
 
   <script src="../lib/three-96.min.js"></script>
   <script src="../lib/dat.gui.js"></script>
@@ -37,6 +38,10 @@
       getMeshPosition: getMeshPosition,
     })
 
+    var ele = document.getElementById('remove');
+    ele.onclick = function() {
+      psv.unMountEdit();
+    }
   </script>
 </body>
 </html>
