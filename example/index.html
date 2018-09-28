@@ -12,6 +12,11 @@
     height: 100%;
     height: 100vh;
   }
+
+  #remove {
+    position: absolute;
+    top: 30px;
+  }
   </style>
 </head>
 <body>
@@ -20,7 +25,7 @@
 
   <script src="../lib/three-96.min.js"></script>
   <script src="../lib/dat.gui.js"></script>
-  <script src="../lib/photo-sphere-viewer-eidt-1.0.0.js"></script>
+  <script src="../lib/photo-sphere-viewer-eidt-1.3.0.js"></script>
   <script>
     var getMeshPosition = function(data) {
       console.log('mesh-data', data);
@@ -40,7 +45,7 @@
 
     var ele = document.getElementById('remove');
     ele.onclick = function() {
-      psv.unMountEdit();
+      psv.willUnmountScene();
     }
   </script>
 </body>

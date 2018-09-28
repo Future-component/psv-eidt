@@ -32,5 +32,5 @@ var psv = new PhotoSphereViewerEidt({
 })
 
 // 卸载编辑场景
-psv.willUnMountScene();
+psv.willUnmountScene();
 ```
